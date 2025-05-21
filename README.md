@@ -24,7 +24,43 @@ A machine learning project leveraging Colombia’s GEIH household survey to buil
 - **Targeting Gaps:** While education, contract type and geography are well accounted for, infrastructure deficits and ethnic vulnerability remain under-weighted in current subsidy rules.  
 - **Modeling Challenges:** Severe class imbalance (only ~8 % recipients) makes it hard for standard learners to detect beneficiaries—advanced imbalance-handling is essential to raise precision without losing recall.
 
+## Prerequisites
+
+The following Python packages (and their dependencies) are required:
+
+```bash
+pip install pandas numpy matplotlib sklearn imblearn xgboost random
+```
+
+## Data Description
+
+The project relies in on folder and one file:
+
+- **`data/CSV/`**  
+  Contains the original May 2024 GEIH survey tables in CSV format:  
+  - `generales.csv`  
+  - `laborales.csv`  
+  - `hogar.csv`  
+  - `subsidios.csv`  
+  - `fuerza_trabajo.csv`  
+  - `desempleados.csv`  
+
+- **`data/Base_Modelo/`**  
+  Contains the consolidated and preprocessed dataset used in the **Advanced Modeling** notebook (Script 2). This file merges, cleans and transforms the key variables needed for training and evaluating imbalance-aware classification models. 
+
+## How to Run
+
+Simply open the notebooks in order—first the **Exploratory Analysis** (`analysis.ipynb`), then the **Advanced Modeling** (`modeling.ipynb`)—and execute each cell sequentially. All code chunks are fully documented for ease of follow-through
+
 ---
 
 Building on these insights can guide policymakers in refining eligibility criteria, expanding coverage and designing multidimensional safety nets that reach everyone who needs them most.  
 
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests at  
+https://github.com/pablo-reyes8
+
+## License
+
+This project is licensed under the Apache License 2.0.  
