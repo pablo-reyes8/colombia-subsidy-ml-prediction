@@ -12,10 +12,12 @@ A machine learning project leveraging Colombia’s GEIH household survey to buil
 
 2. **Advanced Modeling**  
    In this notebook, we explore and implement a variety of intermediate-to-advanced machine learning techniques to tackle a highly imbalanced binary classification problem. Our primary goal is to boost the model’s ability to correctly identify instances of the minority class (Class 1) without sacrificing overall performance. Key methods include:  
-   - Hybrid resampling (SMOTEENN, Borderline-SMOTE, ADASYN)  
+   - Hybrid resampling (SMOTEENN, Hard-Negative Mining)  
    - Cost-sensitive algorithms and class-weight tuning  
-   - Threshold optimization via Precision–Recall curves  
-   - Ensemble strategies (Balanced Random Forest, EasyEnsemble, stacking)  
+   - Threshold optimization via Precision–Recall curves
+   - Two Model Cascade (coarse filter + fine-tuning classifier)
+   - Ensemble and Boosting strategies (Balanced Random Forest, XGBoost)
+   - One Class Models (SVM, Isoletion Forest)  
 
 ## Key Highlights
 
