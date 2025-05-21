@@ -50,7 +50,7 @@ The project relies in on folder and one file:
 
 ## How to Run
 
-Simply open the notebooks in order—first the **Exploratory Analysis** (`analysis.ipynb`), then the **Advanced Modeling** (`modeling.ipynb`)—and execute each cell sequentially. All code chunks are fully documented for ease of follow-through
+Simply open the notebooks in order—first the **Exploratory Analysis** (`subsidy analysis.ipynb`), then the **Advanced Modeling** (`Full Maching Learning Modeling.ipynb`)—and execute each cell sequentially. All code chunks are fully documented for ease of follow-through
 
 ---
 
