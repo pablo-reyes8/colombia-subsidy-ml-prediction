@@ -28,7 +28,7 @@ A machine learning project leveraging Colombia’s GEIH household survey to buil
   The most informative GEIH variables are combined housing cost, household size, declared monthly income, labor‐market formality (contract type, pension contributions) and educational attainment. Embedding these dimensions into eligibility rules markedly improves identification of vulnerable households.
 
 - **Cascading ML Pipeline for Balanced Performance**  
-  A two-stage approach—first a high-recall XGBoost filter, then a precision-focused Random Forest with tuned probability thresholds—meets recall targets (≥ 70 %) while containing false positives, demonstrating that pipeline design outweighs any single algorithm.
+  A two-stage approach, first a high-recall XGBoost filter, then a precision-focused Random Forest with tuned probability thresholds, meets recall targets (≥ 70 %) while containing false positives, demonstrating that pipeline design outweighs any single algorithm.
 
 - **Data Scarcity Limits Supervised Precision**  
   Even with SMOTEENN, Borderline-SMOTE, class-weighted losses, polynomial/PCA feature engineering and exhaustive hyperparameter tuning, supervised cascades plateau at ~20–25 % precision on the subsidy class, constrained by the rarity and overlap of positive examples.
