@@ -36,7 +36,7 @@ pip install pandas numpy matplotlib sklearn imblearn xgboost random
 
 The project relies in on folder and one file:
 
-- **`data/CSV/`**  
+- **`data/CSV.rar/`**  
   Contains the original May 2024 GEIH survey tables in CSV format:  
   - `generales.csv`  
   - `laborales.csv`  
@@ -45,7 +45,7 @@ The project relies in on folder and one file:
   - `fuerza_trabajo.csv`  
   - `desempleados.csv`  
 
-- **`data/Base_Modelo/`**  
+- **`data/Base_Modelo.csv/`**  
   Contains the consolidated and preprocessed dataset used in the **Advanced Modeling** notebook (Script 2). This file merges, cleans and transforms the key variables needed for training and evaluating imbalance-aware classification models. 
 
 ## How to Run
