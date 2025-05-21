@@ -21,10 +21,24 @@ A machine learning project leveraging Colombia’s GEIH household survey to buil
 
 ## Key Highlights
 
-- **Impact Measurement:** Cash transfers more than double mean income and nearly quadruple median income for beneficiary households, drastically narrowing class gaps.  
-- **Feature Importance:** Combined housing cost, household size, declared income, employment formality and education emerge as the top predictors.  
-- **Targeting Gaps:** While education, contract type and geography are well accounted for, infrastructure deficits and ethnic vulnerability remain under-weighted in current subsidy rules.  
-- **Modeling Challenges:** Severe class imbalance (only ~8 % recipients) makes it hard for standard learners to detect beneficiaries—advanced imbalance-handling is essential to raise precision without losing recall.
+- **Dramatic Income Improvements & Persistent Coverage Gap**  
+  Cash transfers more than double mean income (from ~COP 1 M to ~COP 2.7 M) and quadruple median income (from COP 700 k to COP 3 M), compressing the distribution and eliminating extreme low-income outliers. Yet only 8.6 % of individuals receive a subsidy, highlighting a need to broaden coverage.
+
+- **Top Predictive Features for Targeting**  
+  The most informative GEIH variables are combined housing cost, household size, declared monthly income, labor‐market formality (contract type, pension contributions) and educational attainment. Embedding these dimensions into eligibility rules markedly improves identification of vulnerable households.
+
+- **Cascading ML Pipeline for Balanced Performance**  
+  A two-stage approach—first a high-recall XGBoost filter, then a precision-focused Random Forest with tuned probability thresholds—meets recall targets (≥ 70 %) while containing false positives, demonstrating that pipeline design outweighs any single algorithm.
+
+- **Data Scarcity Limits Supervised Precision**  
+  Even with SMOTEENN, Borderline-SMOTE, class-weighted losses, polynomial/PCA feature engineering and exhaustive hyperparameter tuning, supervised cascades plateau at ~20–25 % precision on the subsidy class, constrained by the rarity and overlap of positive examples.
+
+- **Anomaly Detection Excels on High Precision**  
+  Framing subsidy recipients as anomalies (Isolation Forest, One-Class SVM) achieves > 90 % precision—at the expense of lower recall—offering a complementary strategy when high confidence in positive predictions is paramount.
+
+- **Modular Architecture Enables Policy-Driven Trade-Offs**  
+  Each stage (filter, refiner, anomaly detector) can be independently adjusted to favor recall or precision, allowing policymakers to recalibrate the system according to changing objectives or resource constraints.
+
 
 ## Prerequisites
 
